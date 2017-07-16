@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>qoboqo | The original App</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lobster" />
+    <style>
+      .container{margin: auto;text-align: center;}
+      h1 {
+	  font-family: Lobster;
+	  font-size: 34px;
+	  font-style: normal;
+	  font-variant: normal;
+	  font-weight: 500;
+	  line-height: 26.4px;
+}
+      #shield{
+      margin: auto;
+      width: 50%;
+      border: 3px solid green;
+      padding: 10px;
+      background-color: gray;
+      }  
+      #memberBtn{background-color: yellowgreen;}
+      #loginForm{
+      display: none;
+      background-color: yellowgreen;
+      text-align: center;
+      margin-top: 7px;
+      padding-top: 13px;
+      border-radius: 11px;}  
+      @media screen and (max-width: 480px){
+           input {width: 41%;}   
+      }
+    </style> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+  </head>
+  <body>
+    <div class="container">
+      <h1>qoboqo.com</h1>
+      <div id="shield">
+        <h3>Already a member?</h3>
+        <button id="memberBtn">Sign In</button>
+        
+        <div id="loginForm">
+        <form>
+          <input type="email" id="email" placeholder="you@somewhere.com" required />
+          <input type="password" id="pass" placeholder="your password" required />
+          <button>Go!</button>
+          
+          <h4>No Account? <br><span><a href="#" >Register</a></span> </h4>
+               
+        </form>
+        </div>
+        
+        
+              
+      </div>
+          <footer>Powered by <a href="#">Qilobyt</a></footer>
+    </div>
+    
+    <script>
+      $(document).ready(function(){
+    $("#memberBtn").click(function(){
+        $("#loginForm").toggle();
+    });
+});    
+    </script>  
+  </body>
+
+</html>
